@@ -135,7 +135,7 @@ const App = () => {
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="nav-container">
           <div className="nav-logo" onClick={() => scrollToSection('home')}>
-            <span className="logo-text">G<span className="logo-highlight">.</span></span>
+            <span className="logo-text">Gowsik <span className="logo-highlight">B.</span></span>
           </div>
           
           <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
@@ -466,37 +466,41 @@ const App = () => {
               {
                 title: "Smart Blind Stick System",
                 icon: "fa-eye",
-                description: "Advanced IoT system with Edge AI object detection (YOLOv8), text-to-speech, haptic alerts, and React Native app with GPS & SOS.",
+                description: "An advanced, life-assistive IoT system integrating Edge AI (YOLOv8) for real-time obstacle and object detection. Features ultrasonic sensors, haptic vibration feedback, dynamic text-to-speech navigation alerts, and a companion React Native mobile app with live GPS tracking and instant SMS emergency notifications.",
                 tags: ["IoT", "YOLOv8", "React Native"],
                 color: "#2563eb",
+                rgb: "37, 99, 235",
                 link: "https://github.com/gowsik/smart-blind-stick"
               },
               {
                 title: "Virtual Herbal Garden",
                 icon: "fa-leaf",
-                description: "Educational platform for AYUSH systems with product purchasing, shop mapping, and AI chatbot for medicinal plant information.",
+                description: "An interactive AYUSH-centric 3D platform designed to explore and learn about medicinal plants. Built with Three.js, it includes a virtual layout of botanical plants, an AI-powered conversational chatbot providing medicinal usage guidance, local shop mapping for purchasing herbal remedies, and user reviews.",
                 tags: ["React", "AI Chatbot", "Maps"],
                 color: "#10b981",
+                rgb: "16, 185, 129",
                 link: "https://github.com/gowsik/virtual-herbal-garden"
               },
               {
                 title: "CivicConnect - SIH 2025",
                 icon: "fa-city",
-                description: "Civic issue resolution platform using AI and data analytics. Selected among 600+ teams at Smart India Hackathon 2025.",
+                description: "A national-level award-worthy civic management portal designed to streamline public grievance resolution. Utilizes machine learning classification to auto-categorize issues, NLP to summarize community posts, and analytics dashboards for government officials. Selected among the top projects at the SIH 2025 Hackathon.",
                 tags: ["AI", "Analytics", "SIH"],
                 color: "#f59e0b",
+                rgb: "245, 158, 11",
                 link: "https://github.com/gowsik/civicconnect"
               },
               {
                 title: "MindBlossom",
                 icon: "fa-brain",
-                description: "Mental wellness platform for anonymous emotional expression with AI support, stress-relief guidance, and mood-based Tamil songs.",
+                description: "A secure, privacy-first mental health web application allowing users to share emotions anonymously. Integrates an AI sentiment check for real-time supportive feedback, interactive guided meditation guides, a mood journal, and personalized recommendations of stress-relieving Tamil music lists.",
                 tags: ["AI", "Privacy", "React"],
                 color: "#8b5cf6",
+                rgb: "139, 92, 246",
                 link: "https://github.com/gowsik/mindblossom"
               }
             ].map((project, index) => (
-              <div key={index} className="project-card animate-on-scroll" style={{ '--project-color': project.color, animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="project-card animate-on-scroll" style={{ '--project-color': project.color, '--project-color-rgb': project.rgb, animationDelay: `${index * 0.1}s` }}>
                 <div className="project-card-inner">
                   <div className="project-icon" style={{ background: project.color }}>
                     <i className={`fas ${project.icon}`}></i>
@@ -720,7 +724,7 @@ const App = () => {
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-logo">
-              <span>G<span>.</span></span>
+              <span>Gowsik <span className="logo-highlight">B.</span></span>
               <p>Building the future, one line of code at a time.</p>
             </div>
             <div className="footer-links">
